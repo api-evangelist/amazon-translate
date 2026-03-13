@@ -1,0 +1,227 @@
+openapi: 3.1.0
+info:
+  title: Amazon Translate API
+  description: >-
+    Amazon Translate is a neural machine translation service that delivers
+    fast, high-quality, affordable, and customizable language translation.
+    The API supports real-time and batch translation, custom terminology,
+    and parallel data for customized translations.
+  version: '2017-07-01'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/translate/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+externalDocs:
+  description: Amazon Translate API Reference
+  url: https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html
+servers:
+  - url: https://translate.{region}.amazonaws.com
+    description: Amazon Translate regional endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - eu-west-1
+          - eu-west-2
+          - eu-central-1
+          - ap-northeast-1
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-south-1
+          - ca-central-1
+paths:
+  /#TranslateText:
+    post:
+      operationId: TranslateText
+      summary: Translate text in real time
+      description: >-
+        Translates input text from the source language to the target language
+        using neural machine translation.
+      tags:
+        - Translation
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - Text
+                - SourceLanguageCode
+                - TargetLanguageCode
+              properties:
+                Text:
+                  type: string
+                  description: The text to translate.
+                  maxLength: 10000
+                SourceLanguageCode:
+                  type: string
+                  description: The language code for the source text.
+                TargetLanguageCode:
+                  type: string
+                  description: The language code for the target language.
+                TerminologyNames:
+                  type: array
+                  items:
+                    type: string
+                  description: Custom terminology names to use.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  TranslatedText:
+                    type: string
+                  SourceLanguageCode:
+                    type: string
+                  TargetLanguageCode:
+                    type: string
+  /#StartTextTranslationJob:
+    post:
+      operationId: StartTextTranslationJob
+      summary: Start a batch translation job
+      description: >-
+        Starts an asynchronous batch translation job to translate a collection
+        of documents stored in Amazon S3.
+      tags:
+        - Batch Translation
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - InputDataConfig
+                - OutputDataConfig
+                - DataAccessRoleArn
+                - SourceLanguageCode
+                - TargetLanguageCodes
+              properties:
+                JobName:
+                  type: string
+                InputDataConfig:
+                  type: object
+                  properties:
+                    S3Uri:
+                      type: string
+                    ContentType:
+                      type: string
+                OutputDataConfig:
+                  type: object
+                  properties:
+                    S3Uri:
+                      type: string
+                DataAccessRoleArn:
+                  type: string
+                SourceLanguageCode:
+                  type: string
+                TargetLanguageCodes:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  JobId:
+                    type: string
+                  JobStatus:
+                    type: string
+  /#ListTextTranslationJobs:
+    post:
+      operationId: ListTextTranslationJobs
+      summary: List batch translation jobs
+      description: Lists batch translation jobs with optional filtering.
+      tags:
+        - Batch Translation
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                MaxResults:
+                  type: integer
+                NextToken:
+                  type: string
+      responses:
+        '200':
+          description: Successful response.
+  /#ImportTerminology:
+    post:
+      operationId: ImportTerminology
+      summary: Import custom terminology
+      description: Creates or updates a custom terminology resource.
+      tags:
+        - Terminology
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - Name
+                - MergeStrategy
+                - TerminologyData
+              properties:
+                Name:
+                  type: string
+                MergeStrategy:
+                  type: string
+                  enum:
+                    - OVERWRITE
+                TerminologyData:
+                  type: object
+                  properties:
+                    File:
+                      type: string
+                      format: byte
+                    Format:
+                      type: string
+                      enum:
+                        - CSV
+                        - TMX
+                        - TSV
+      responses:
+        '200':
+          description: Successful response.
+components:
+  schemas:
+    Tag:
+      type: object
+      properties:
+        Key:
+          type: string
+        Value:
+          type: string
+      required:
+        - Key
+        - Value
+  securitySchemes:
+    aws_sig_v4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4 authentication.
+security:
+  - aws_sig_v4: []

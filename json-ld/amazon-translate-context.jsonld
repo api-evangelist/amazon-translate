@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "translate": "https://docs.aws.amazon.com/translate/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+    "status": "schema:status",
+    "provider": {
+      "@id": "schema:provider",
+      "@type": "schema:Organization"
+    },
+    "TextTranslationJob": {
+      "@id": "translate:API_StartTextTranslationJob.html",
+      "@context": {
+        "JobId": "schema:identifier",
+        "JobName": "schema:name",
+        "JobStatus": "schema:status",
+        "SourceLanguageCode": "schema:inLanguage",
+        "TargetLanguageCodes": "translate:TargetLanguageCodes",
+        "SubmittedTime": "schema:dateCreated",
+        "EndTime": "schema:endDate"
+      }
+    },
+    "TranslateText": {
+      "@id": "translate:API_TranslateText.html",
+      "@context": {
+        "Text": "schema:text",
+        "TranslatedText": "schema:text",
+        "SourceLanguageCode": "schema:inLanguage",
+        "TargetLanguageCode": "translate:TargetLanguageCode"
+      }
+    },
+    "Terminology": {
+      "@id": "translate:API_ImportTerminology.html",
+      "@context": {
+        "Name": "schema:name",
+        "Description": "schema:description",
+        "Arn": "schema:identifier",
+        "SourceLanguageCode": "schema:inLanguage",
+        "TargetLanguageCodes": "translate:TargetLanguageCodes",
+        "CreatedAt": "schema:dateCreated",
+        "LastUpdatedAt": "schema:dateModified"
+      }
+    },
+    "Tag": {
+      "@id": "translate:Tag",
+      "@context": {
+        "Key": "schema:name",
+        "Value": "schema:value"
+      }
+    }
+  }
+}
