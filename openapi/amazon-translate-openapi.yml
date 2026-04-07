@@ -43,7 +43,7 @@ paths:
   /#TranslateText:
     post:
       operationId: TranslateText
-      summary: Translate text in real time
+      summary: Amazon Translate Translate text in real time
       description: >-
         Translates input text from the source language to the target language
         using neural machine translation.
@@ -92,7 +92,7 @@ paths:
   /#StartTextTranslationJob:
     post:
       operationId: StartTextTranslationJob
-      summary: Start a batch translation job
+      summary: Amazon Translate Start a batch translation job
       description: >-
         Starts an asynchronous batch translation job to translate a collection
         of documents stored in Amazon S3.
@@ -148,7 +148,7 @@ paths:
   /#ListTextTranslationJobs:
     post:
       operationId: ListTextTranslationJobs
-      summary: List batch translation jobs
+      summary: Amazon Translate List batch translation jobs
       description: Lists batch translation jobs with optional filtering.
       tags:
         - Batch Translation
@@ -169,7 +169,7 @@ paths:
   /#ImportTerminology:
     post:
       operationId: ImportTerminology
-      summary: Import custom terminology
+      summary: Amazon Translate Import custom terminology
       description: Creates or updates a custom terminology resource.
       tags:
         - Terminology
