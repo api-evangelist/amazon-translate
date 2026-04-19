@@ -1,0 +1,7 @@
+id: amazon-translate-capability
+name: Amazon Translate Capability
+description: Workflow-oriented capability for Amazon Translate
+tags:
+- AWS
+consumes:
+- ref: capabilities/shared/amazon-translate-shared.yaml

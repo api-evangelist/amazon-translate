@@ -20,35 +20,35 @@ externalDocs:
   description: Amazon Translate API Reference
   url: https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html
 servers:
-  - url: https://translate.{region}.amazonaws.com
-    description: Amazon Translate regional endpoint
-    variables:
-      region:
-        default: us-east-1
-        description: AWS region
-        enum:
-          - us-east-1
-          - us-east-2
-          - us-west-1
-          - us-west-2
-          - eu-west-1
-          - eu-west-2
-          - eu-central-1
-          - ap-northeast-1
-          - ap-southeast-1
-          - ap-southeast-2
-          - ap-south-1
-          - ca-central-1
+- url: https://translate.{region}.amazonaws.com
+  description: Amazon Translate regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - ca-central-1
 paths:
   /#TranslateText:
     post:
       operationId: TranslateText
-      summary: Amazon Translate Translate text in real time
+      summary: Amazon Translate Translate Text in Real Time
       description: >-
         Translates input text from the source language to the target language
         using neural machine translation.
       tags:
-        - Translation
+      - Translation
       requestBody:
         required: true
         content:
@@ -56,9 +56,9 @@ paths:
             schema:
               type: object
               required:
-                - Text
-                - SourceLanguageCode
-                - TargetLanguageCode
+              - Text
+              - SourceLanguageCode
+              - TargetLanguageCode
               properties:
                 Text:
                   type: string
@@ -89,15 +89,18 @@ paths:
                     type: string
                   TargetLanguageCode:
                     type: string
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#StartTextTranslationJob:
     post:
       operationId: StartTextTranslationJob
-      summary: Amazon Translate Start a batch translation job
+      summary: Amazon Translate Start a Batch Translation Job
       description: >-
         Starts an asynchronous batch translation job to translate a collection
         of documents stored in Amazon S3.
       tags:
-        - Batch Translation
+      - Batch Translation
       requestBody:
         required: true
         content:
@@ -105,11 +108,11 @@ paths:
             schema:
               type: object
               required:
-                - InputDataConfig
-                - OutputDataConfig
-                - DataAccessRoleArn
-                - SourceLanguageCode
-                - TargetLanguageCodes
+              - InputDataConfig
+              - OutputDataConfig
+              - DataAccessRoleArn
+              - SourceLanguageCode
+              - TargetLanguageCodes
               properties:
                 JobName:
                   type: string
@@ -145,13 +148,16 @@ paths:
                     type: string
                   JobStatus:
                     type: string
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#ListTextTranslationJobs:
     post:
       operationId: ListTextTranslationJobs
-      summary: Amazon Translate List batch translation jobs
+      summary: Amazon Translate List Batch Translation Jobs
       description: Lists batch translation jobs with optional filtering.
       tags:
-        - Batch Translation
+      - Batch Translation
       requestBody:
         required: false
         content:
@@ -166,13 +172,16 @@ paths:
       responses:
         '200':
           description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#ImportTerminology:
     post:
       operationId: ImportTerminology
-      summary: Amazon Translate Import custom terminology
+      summary: Amazon Translate Import Custom Terminology
       description: Creates or updates a custom terminology resource.
       tags:
-        - Terminology
+      - Terminology
       requestBody:
         required: true
         content:
@@ -180,16 +189,16 @@ paths:
             schema:
               type: object
               required:
-                - Name
-                - MergeStrategy
-                - TerminologyData
+              - Name
+              - MergeStrategy
+              - TerminologyData
               properties:
                 Name:
                   type: string
                 MergeStrategy:
                   type: string
                   enum:
-                    - OVERWRITE
+                  - OVERWRITE
                 TerminologyData:
                   type: object
                   properties:
@@ -199,12 +208,15 @@ paths:
                     Format:
                       type: string
                       enum:
-                        - CSV
-                        - TMX
-                        - TSV
+                      - CSV
+                      - TMX
+                      - TSV
       responses:
         '200':
           description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
 components:
   schemas:
     Tag:
@@ -215,8 +227,8 @@ components:
         Value:
           type: string
       required:
-        - Key
-        - Value
+      - Key
+      - Value
   securitySchemes:
     aws_sig_v4:
       type: apiKey
@@ -224,8 +236,8 @@ components:
       in: header
       description: AWS Signature Version 4 authentication.
 security:
-  - aws_sig_v4: []
+- aws_sig_v4: []
 tags:
-  - name: Batch Translation
-  - name: Terminology
-  - name: Translation
+- name: Batch Translation
+- name: Terminology
+- name: Translation
