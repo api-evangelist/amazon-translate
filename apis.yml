@@ -1,12 +1,14 @@
 name: Amazon Translate
-description: Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation for applications and content.
+description: Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable
+  language translation for applications and content.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/translate/
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: Amazon Translate REST API
-  description: RESTful API for Amazon Translate machine translation operations including real-time translation, batch translation jobs, custom terminology, and parallel data management.
+  description: RESTful API for Amazon Translate machine translation operations including real-time translation, batch translation
+    jobs, custom terminology, and parallel data management.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/translate/
   baseURL: https://translate.amazonaws.com
@@ -48,6 +50,12 @@ apis:
     url: https://docs.aws.amazon.com/translate/latest/dg/service_code_examples.html
   - type: Security
     url: https://docs.aws.amazon.com/translate/latest/dg/security.html
+  - type: NaftikoCapability
+    url: capabilities/amazon-translate-batch-translation.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-translate-terminology.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-translate-translation.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -85,8 +93,6 @@ common:
   url: https://raw.githubusercontent.com/api-evangelist/amazon-translate/refs/heads/main/rules/amazon-translate-spectral-rules.yml
 - type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/amazon-translate/refs/heads/main/vocabulary/amazon-translate-vocabulary.yaml
-- type: NaftikoCapability
-  url: https://raw.githubusercontent.com/api-evangelist/amazon-translate/refs/heads/main/capabilities/amazon-translate-capability.yaml
 - type: Features
   data:
   - name: Automation
@@ -100,15 +106,15 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/marketplace
 integrations:
-  - name: Sign in
-  - name: Agent Mode
-  - name: 'Why AWS Marketplace?'
-  - name: Get started in AWS Marketplace
-  - name: Industry
-  - name: Resources
-  - name: Become a Channel Partner
-  - name: Sell in AWS Marketplace
-  - name: Manage Your Account
+- name: Sign in
+- name: Agent Mode
+- name: Why AWS Marketplace?
+- name: Get started in AWS Marketplace
+- name: Industry
+- name: Resources
+- name: Become a Channel Partner
+- name: Sell in AWS Marketplace
+- name: Manage Your Account
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

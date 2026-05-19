@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Translate API — Translation
+  description: 'Amazon Translate API — Translation. 1 operations. Lead operation: Amazon Translate Translate Text in Real
+    Time. Self-contained Naftiko capability covering one Amazon Translate business surface.'
+  tags:
+  - Amazon Translate
+  - Translation
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_TRANSLATE_API_KEY: AMAZON_TRANSLATE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-translate-translation
+    baseUri: https://translate.{region}.amazonaws.com
+    description: Amazon Translate API — Translation business capability. Self-contained, no shared references.
+    resources:
+    - name: '#TranslateText'
+      path: /#TranslateText
+      operations:
+      - name: translatetext
+        method: POST
+        description: Amazon Translate Translate Text in Real Time
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_TRANSLATE_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-translate-translation-rest
+    port: 8080
+    description: REST adapter for Amazon Translate API — Translation. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/translatetext
+      name: translatetext
+      description: 'REST surface for #TranslateText.'
+      operations:
+      - method: POST
+        name: translatetext
+        description: Amazon Translate Translate Text in Real Time
+        call: amazon-translate-translation.translatetext
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-translate-translation-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Translate API — Translation. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: amazon-translate-translate-text-real
+      description: Amazon Translate Translate Text in Real Time
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-translate-translation.translatetext
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

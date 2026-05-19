@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Translate API — Terminology
+  description: 'Amazon Translate API — Terminology. 1 operations. Lead operation: Amazon Translate Import Custom Terminology.
+    Self-contained Naftiko capability covering one Amazon Translate business surface.'
+  tags:
+  - Amazon Translate
+  - Terminology
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_TRANSLATE_API_KEY: AMAZON_TRANSLATE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-translate-terminology
+    baseUri: https://translate.{region}.amazonaws.com
+    description: Amazon Translate API — Terminology business capability. Self-contained, no shared references.
+    resources:
+    - name: '#ImportTerminology'
+      path: /#ImportTerminology
+      operations:
+      - name: importterminology
+        method: POST
+        description: Amazon Translate Import Custom Terminology
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_TRANSLATE_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-translate-terminology-rest
+    port: 8080
+    description: REST adapter for Amazon Translate API — Terminology. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/importterminology
+      name: importterminology
+      description: 'REST surface for #ImportTerminology.'
+      operations:
+      - method: POST
+        name: importterminology
+        description: Amazon Translate Import Custom Terminology
+        call: amazon-translate-terminology.importterminology
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-translate-terminology-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Translate API — Terminology. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: amazon-translate-import-custom-terminology
+      description: Amazon Translate Import Custom Terminology
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-translate-terminology.importterminology
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
