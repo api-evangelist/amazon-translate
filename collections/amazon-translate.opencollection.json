@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Translate API",
+    "version": "2017-07-01"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Translation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Translate Translate Text in Real Time",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://translate.{region}.amazonaws.com/#TranslateText",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Translates input text from the source language to the target language using neural machine translation."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Batch Translation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Translate Start a Batch Translation Job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://translate.{region}.amazonaws.com/#StartTextTranslationJob",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Starts an asynchronous batch translation job to translate a collection of documents stored in Amazon S3."
+        },
+        {
+          "info": {
+            "name": "Amazon Translate List Batch Translation Jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://translate.{region}.amazonaws.com/#ListTextTranslationJobs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists batch translation jobs with optional filtering."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Terminology",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Translate Import Custom Terminology",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://translate.{region}.amazonaws.com/#ImportTerminology",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates or updates a custom terminology resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
