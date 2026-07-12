@@ -54,6 +54,14 @@ apis:
       - type: Security
         url: https://docs.aws.amazon.com/translate/latest/dg/security.html
 common:
+  - type: TrustCenter
+    url: security/amazon-translate-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-translate-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-translate-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-translate-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/
   - type: Website
