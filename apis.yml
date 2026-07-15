@@ -54,6 +54,8 @@ apis:
       - type: Security
         url: https://docs.aws.amazon.com/translate/latest/dg/security.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-translate-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-translate-trust-center.yml
   - type: VulnerabilityDisclosure
