@@ -1,0 +1,130 @@
+openapi: 3.1.0
+info:
+  title: Amazon Translate Batch Translation API
+  description: Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation. The API supports real-time and batch translation, custom terminology, and parallel data for customized translations.
+  version: '2017-07-01'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/translate/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://translate.{region}.amazonaws.com
+  description: Amazon Translate regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - ca-central-1
+security:
+- aws_sig_v4: []
+tags:
+- name: Batch Translation
+paths:
+  /#StartTextTranslationJob:
+    post:
+      operationId: StartTextTranslationJob
+      summary: Amazon Translate Start a Batch Translation Job
+      description: Starts an asynchronous batch translation job to translate a collection of documents stored in Amazon S3.
+      tags:
+      - Batch Translation
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+              - InputDataConfig
+              - OutputDataConfig
+              - DataAccessRoleArn
+              - SourceLanguageCode
+              - TargetLanguageCodes
+              properties:
+                JobName:
+                  type: string
+                InputDataConfig:
+                  type: object
+                  properties:
+                    S3Uri:
+                      type: string
+                    ContentType:
+                      type: string
+                OutputDataConfig:
+                  type: object
+                  properties:
+                    S3Uri:
+                      type: string
+                DataAccessRoleArn:
+                  type: string
+                SourceLanguageCode:
+                  type: string
+                TargetLanguageCodes:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  JobId:
+                    type: string
+                  JobStatus:
+                    type: string
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+  /#ListTextTranslationJobs:
+    post:
+      operationId: ListTextTranslationJobs
+      summary: Amazon Translate List Batch Translation Jobs
+      description: Lists batch translation jobs with optional filtering.
+      tags:
+      - Batch Translation
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                MaxResults:
+                  type: integer
+                NextToken:
+                  type: string
+      responses:
+        '200':
+          description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+components:
+  securitySchemes:
+    aws_sig_v4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4 authentication.
+externalDocs:
+  description: Amazon Translate API Reference
+  url: https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html
