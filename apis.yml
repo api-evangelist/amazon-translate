@@ -2,58 +2,141 @@ name: Amazon Translate
 description: >-
   Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and
   customizable language translation for applications and content.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/translate/
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-  - name: Amazon Translate REST API
-    description: >-
-      RESTful API for Amazon Translate machine translation operations including real-time translation, batch translation
-      jobs, custom terminology, and parallel data management.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/translate/
-    baseURL: https://translate.amazonaws.com
-    tags:
-      - AWS
-      - Machine Translation
-      - Natural Language Processing
-      - Translation
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/translate/latest/APIReference/
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/amazon-translate/refs/heads/main/openapi/amazon-translate-openapi.yml
-      - type: OpenAPI
-        url: https://api.apis.guru/v2/specs/amazonaws.com/translate/2017-07-01/openapi.yaml
-      - type: JSONSchema
-        url: json-schema/amazon-translate-job-schema.json
-      - type: JSONLD
-        url: json-ld/amazon-translate-context.jsonld
-      - type: Pricing
-        url: https://aws.amazon.com/translate/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/translate/getting-started/
-      - type: Authentication
-        url: https://docs.aws.amazon.com/translate/latest/APIReference/CommonParameters.html
-      - type: SDKs
-        url: https://aws.amazon.com/tools/
-      - type: StatusPage
-        url: https://status.aws.amazon.com/
-      - type: FAQ
-        url: https://aws.amazon.com/translate/faqs/
-      - type: ServiceLevelAgreement
-        url: https://aws.amazon.com/machine-learning/language/sla/
-      - type: User Guide
-        url: https://docs.aws.amazon.com/translate/latest/dg/what-is.html
-      - type: APIReference
-        url: https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html
-      - type: Code Examples
-        url: https://docs.aws.amazon.com/translate/latest/dg/service_code_examples.html
-      - type: Security
-        url: https://docs.aws.amazon.com/translate/latest/dg/security.html
+- aid: amazon-translate:amazon-translate-batch-translation-api
+  name: Amazon Translate Batch Translation API
+  description: The Batch Translation API from Amazon Translate — 2 operation(s) for batch translation.
+  humanURL: https://aws.amazon.com/translate/
+  baseURL: https://translate.amazonaws.com
+  tags:
+  - Batch Translation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-translate-batch-translation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/
+  - type: JSONSchema
+    url: json-schema/amazon-translate-job-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-translate-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/translate/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/translate/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/CommonParameters.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/translate/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/machine-learning/language/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/translate/latest/dg/what-is.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/translate/latest/dg/service_code_examples.html
+  - type: Security
+    url: https://docs.aws.amazon.com/translate/latest/dg/security.html
+- aid: amazon-translate:amazon-translate-terminology-api
+  name: Amazon Translate Terminology API
+  description: The Terminology API from Amazon Translate — 1 operation(s) for terminology.
+  humanURL: https://aws.amazon.com/translate/
+  baseURL: https://translate.amazonaws.com
+  tags:
+  - Terminology
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-translate-terminology-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/
+  - type: JSONSchema
+    url: json-schema/amazon-translate-job-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-translate-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/translate/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/translate/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/CommonParameters.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/translate/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/machine-learning/language/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/translate/latest/dg/what-is.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/translate/latest/dg/service_code_examples.html
+  - type: Security
+    url: https://docs.aws.amazon.com/translate/latest/dg/security.html
+- aid: amazon-translate:amazon-translate-translation-api
+  name: Amazon Translate Translation API
+  description: The Translation API from Amazon Translate — 1 operation(s) for translation.
+  humanURL: https://aws.amazon.com/translate/
+  baseURL: https://translate.amazonaws.com
+  tags:
+  - Translation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-translate-translation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/
+  - type: JSONSchema
+    url: json-schema/amazon-translate-job-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-translate-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/translate/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/translate/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/CommonParameters.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/translate/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/machine-learning/language/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/translate/latest/dg/what-is.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/translate/latest/dg/service_code_examples.html
+  - type: Security
+    url: https://docs.aws.amazon.com/translate/latest/dg/security.html
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-translate/overview
   - type: AgenticAccess
     url: agentic-access/amazon-translate-agentic-access.yml
   - type: TrustCenter
