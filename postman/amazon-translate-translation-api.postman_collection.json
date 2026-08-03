@@ -1,0 +1,144 @@
+{
+  "info": {
+    "_postman_id": "4c104680-0722-4131-b713-b1d3a9a3b781",
+    "name": "Amazon Translate Batch Translation API",
+    "description": "Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation. The API supports real-time and batch translation, custom terminology, and parallel data for customized translations.\n\nContact Support:\n Name: Amazon Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:56:53.000Z",
+    "updatedAt": "2026-07-28T00:56:53.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-4c104680-0722-4131-b713-b1d3a9a3b781"
+  },
+  "item": [
+    {
+      "name": "#TranslateText",
+      "item": [
+        {
+          "name": "Amazon Translate Translate Text in Real Time",
+          "id": "b60e6b28-6d7c-4c57-937e-d9511f140711",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Text\": \"<string>\",\n  \"SourceLanguageCode\": \"<string>\",\n  \"TargetLanguageCode\": \"<string>\",\n  \"TerminologyNames\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#TranslateText",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "TranslateText"
+            },
+            "description": "Translates input text from the source language to the target language using neural machine translation."
+          },
+          "response": [
+            {
+              "id": "ae40a6bc-b244-4716-b1f5-a88f4393f746",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Text\": \"<string>\",\n  \"SourceLanguageCode\": \"<string>\",\n  \"TargetLanguageCode\": \"<string>\",\n  \"TerminologyNames\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#TranslateText",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "TranslateText"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"TranslatedText\": \"<string>\",\n  \"SourceLanguageCode\": \"<string>\",\n  \"TargetLanguageCode\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:56:54.000Z",
+              "updatedAt": "2026-07-28T00:56:54.000Z",
+              "uid": "35240-ae40a6bc-b244-4716-b1f5-a88f4393f746"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:53.000Z",
+          "updatedAt": "2026-07-28T00:56:53.000Z",
+          "uid": "35240-b60e6b28-6d7c-4c57-937e-d9511f140711"
+        }
+      ],
+      "id": "f1e11bce-8d3c-487d-a42d-bf09509c2ca7",
+      "createdAt": "2026-07-28T00:56:53.000Z",
+      "updatedAt": "2026-07-28T00:56:53.000Z",
+      "uid": "35240-f1e11bce-8d3c-487d-a42d-bf09509c2ca7"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://translate.{{region}}.amazonaws.com"
+    }
+  ]
+}
