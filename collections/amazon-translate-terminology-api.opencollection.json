@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Translate Batch Translation Terminology API",
+    "version": "2017-07-01"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Terminology",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Translate Import Custom Terminology",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://translate.{region}.amazonaws.com/#ImportTerminology",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates or updates a custom terminology resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
