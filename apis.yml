@@ -2,6 +2,18 @@ name: Amazon Translate
 description: >-
   Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and
   customizable language translation for applications and content.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: freemium
