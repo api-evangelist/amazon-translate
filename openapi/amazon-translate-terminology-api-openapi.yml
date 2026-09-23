@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon Translate Batch Translation Terminology API
+  title: Amazon Translate Terminology API
   description: Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation. The API supports real-time and batch translation, custom terminology, and parallel data for customized translations.
   version: '2017-07-01'
   contact:

@@ -1,9 +1,7 @@
 {
   "provider": "amazon-translate",
   "sources": [
-    "amazon-translate-batch-translation-api-openapi.yml",
-    "amazon-translate-terminology-api-openapi.yml",
-    "amazon-translate-translation-api-openapi.yml"
+    "_original/amazon-translate-openapi.yml"
   ],
   "outputs": [
     "amazon-translate-batch-translation-api-openapi.yml",
@@ -14,10 +12,13 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "amazon-translate-batch-translation-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "amazon-translate-terminology-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "amazon-translate-translation-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-translate-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-translate-batch-translation-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-translate-terminology-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-translate-translation-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
