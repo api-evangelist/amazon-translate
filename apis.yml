@@ -232,5 +232,5 @@ tags:
   - Machine Translation
   - NLP
   - Translation
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
