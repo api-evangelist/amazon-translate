@@ -149,6 +149,12 @@ apis:
   - type: Security
     url: https://docs.aws.amazon.com/translate/latest/dg/security.html
 common:
+  - type: Plans
+    url: plans/amazon-translate-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/amazon-translate-rate-limits.yml
+  - type: FinOps
+    url: finops/amazon-translate-finops.yml
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-translate/overview
   - type: AgenticAccess
