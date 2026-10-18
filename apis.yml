@@ -236,6 +236,13 @@ tags:
   - Language Processing
   - Localization
   - Machine Translation
+  - Natural Language Processing
+  - Translation
+tags_raw:
+  - AWS
+  - Language Processing
+  - Localization
+  - Machine Translation
   - NLP
   - Translation
 x-parent: amazon-web-services
