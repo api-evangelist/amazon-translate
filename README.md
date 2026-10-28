@@ -1,4 +1,4 @@
-# Amazon Translate (amazon-translate)
+# Amazon Translate
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,85 +66,172 @@
 
 Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation for applications and content.
 
-**APIs.json:** [https://aws.amazon.com/translate/](https://aws.amazon.com/translate/)
+**Areas:** AWS · Language Processing · Localization · Machine Translation · Natural Language Processing · Translation
 
-## Tags
+## Amazon Translate on APIs.io
 
-- AWS
-- Language Processing
-- Localization
-- Machine Translation
-- NLP
-- Translation
+Everything profiled for Amazon Translate is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-translate/](https://apis.io/providers/amazon-translate/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (5)
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+- [Amazon Translate Batch Translation API](https://apis.io/apis/amazon-translate/amazon-translate-batch-translation-api/) — The Batch Translation API from Amazon Translate — 2 operation(s) for batch translation.
+- [Amazon Translate Terminology API](https://apis.io/apis/amazon-translate/amazon-translate-terminology-api/) — The Terminology API from Amazon Translate — 1 operation(s) for terminology.
+- [Amazon Translate Translation API](https://apis.io/apis/amazon-translate/amazon-translate-translation-api/) — The Translation API from Amazon Translate — 1 operation(s) for translation.
+- [Amazon Translate Translate Operations API](https://apis.io/apis/amazon-translate/amazon-translate-operations-api/) — The Translate Operations API from Amazon Translate — 7 operation(s) for translate operations.
+- [Amazon Translate Translate Parallel Data API](https://apis.io/apis/amazon-translate/amazon-translate-parallel-data-api/) — The Translate Parallel Data API from Amazon Translate — 5 operation(s) for translate parallel data.
 
-## APIs
+### Published properties
 
-### Amazon Translate REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-RESTful API for Amazon Translate machine translation operations including real-time translation, batch translation jobs, custom terminology, and parallel data management.
+#### Agentic access (1)
 
-- **Human URL:** [https://aws.amazon.com/translate/](https://aws.amazon.com/translate/)
-- **Base URL:** `https://translate.amazonaws.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Amazon Translate Agentic Access](https://apis.io/agentic-access/amazon-translate/amazon-translate-agentic-access/)
 
-- AWS
-- Machine Translation
-- Natural Language Processing
-- Translation
+#### JSON Schema (2)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/translate/latest/APIReference/)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/amazon-translate/refs/heads/main/openapi/amazon-translate-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](https://api.apis.guru/v2/specs/amazonaws.com/translate/2017-07-01/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](json-schema/amazon-translate-job-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/amazon-translate-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Pricing](https://aws.amazon.com/translate/pricing/)
-- [Getting Started](https://aws.amazon.com/translate/getting-started/)
-- [Authentication](https://docs.aws.amazon.com/translate/latest/APIReference/CommonParameters.html)
-- [S D Ks](https://aws.amazon.com/tools/)
-- [Status Page](https://status.aws.amazon.com/)
-- [F A Q](https://aws.amazon.com/translate/faqs/)
-- [Service Level Agreement](https://aws.amazon.com/machine-learning/language/sla/)
-- [User  Guide](https://docs.aws.amazon.com/translate/latest/dg/what-is.html)
-- [API Reference](https://docs.aws.amazon.com/translate/latest/APIReference/Welcome.html)
-- [Code  Examples](https://docs.aws.amazon.com/translate/latest/dg/service_code_examples.html)
-- [Security](https://docs.aws.amazon.com/translate/latest/dg/security.html)
-- [Postman Collection](collections/amazon-translate.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-translate.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Amazon Translate Translation Job](https://apis.io/schemas/amazon-translate/amazon-translate-job/)
+- [Tag](https://apis.io/schemas/amazon-translate/amazon-translate-tag/)
 
-## Common Properties
+#### JSON Structure (2)
 
-- [Portal](https://aws.amazon.com/)
+Data models expressed in JSON Structure.
+
+- [Amazon Translate Job Structure](https://apis.io/json-structure/amazon-translate/amazon-translate-job-structure/)
+- [Amazon Translate Tag Structure](https://apis.io/json-structure/amazon-translate/amazon-translate-tag-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Translate Context](https://apis.io/jsonld/amazon-translate/amazon-translate-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Translate Vocabulary](https://apis.io/vocabularies/amazon-translate/amazon-translate-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Amazon Translate Example](https://apis.io/examples/amazon-translate/amazon-translate-example/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Amazon Translate API](https://apis.io/collections/amazon-translate/open-amazon-translate/)
+- [Amazon Translate Batch Translation API](https://apis.io/collections/amazon-translate/open-amazon-translate-batch-translation-api/)
+- [Amazon Translate Batch Translation Terminology API](https://apis.io/collections/amazon-translate/open-amazon-translate-terminology-api/)
+- [Amazon Translate Batch Translation API](https://apis.io/collections/amazon-translate/open-amazon-translate-translation-api/)
+- [Amazon Translate Batch Translation API](https://apis.io/collections/amazon-translate/postman-amazon-translate-batch-translation-api/)
+- [Amazon Translate Batch Translation Terminology API](https://apis.io/collections/amazon-translate/postman-amazon-translate-terminology-api/)
+- [Amazon Translate Batch Translation API](https://apis.io/collections/amazon-translate/postman-amazon-translate-translation-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Translate — jsonschema rules](https://apis.io/rules/amazon-translate/amazon-translate-jsonschema-spectral-rules/)
+- [Amazon Translate API Rules](https://apis.io/rules/amazon-translate/amazon-translate-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Translate Authentication](https://apis.io/security/amazon-translate/amazon-translate-authentication/)
+- [Amazon Translate Domain Security](https://apis.io/security/amazon-translate/amazon-translate-domain-security/)
+- [Amazon Translate Trust Center](https://apis.io/security/amazon-translate/amazon-translate-trust-center/)
+- [Amazon Translate Vulnerability Disclosure](https://apis.io/security/amazon-translate/amazon-translate-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Translate Plans Pricing](https://apis.io/plans/amazon-translate/amazon-translate-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Translate Rate Limits](https://apis.io/rate-limits/amazon-translate/amazon-translate-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Translate Finops](https://apis.io/finops/amazon-translate/amazon-translate-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/translate/)
 - [Documentation](https://docs.aws.amazon.com/translate/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/machine-learning/)
-- [GitHub Organization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/translate/)
-- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Knowledge  Center](https://repost.aws/knowledge-center)
-- [YouTube](https://www.youtube.com/user/AmazonWebServices)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/amazon-translate)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [Spectral Rules](https://raw.githubusercontent.com/api-evangelist/amazon-translate/refs/heads/main/rules/amazon-translate-spectral-rules.yml)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/amazon-translate/refs/heads/main/vocabulary/amazon-translate-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](https://aws.amazon.com/marketplace)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 56.6** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 58.1 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 72.6 |
+| Access clarity | 53.9 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-translate/](https://apis.io/providers/amazon-translate/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Translate: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-translate/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
