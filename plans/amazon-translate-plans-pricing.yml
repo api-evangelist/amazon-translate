@@ -1,0 +1,123 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/translate/pricing/
+sources:
+- https://aws.amazon.com/translate/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T141238
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: per-call
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+  managed_tier: Standard Text Translation
+published: true
+note: Pay-as-you-go per character pricing; free tier 2M chars/month for 12 months. Volume discount via
+  contact for >1 billion characters a month.
+plan_count: 6
+currency: USD
+plans:
+- name: Standard Text Translation
+  price_text: $15.00 per million characters
+  price: 15
+  currency: USD
+  period: per-use
+  unit: million characters
+  included_quota: 2 million characters per month for 12 months
+- name: Batch Document Translation
+  price_text: $15.00 per million characters
+  price: 15
+  currency: USD
+  period: per-use
+  unit: million characters
+  included_quota: 2 million characters per month for 12 months
+- name: Real-Time Document Translation (Text & HTML)
+  price_text: $15.00 per million characters
+  price: 15
+  currency: USD
+  period: per-use
+  unit: million characters
+  included_quota: No Free Tier for this service
+- name: Real-Time Document Translation (Docx)
+  price_text: $30.00 per million characters
+  price: 30
+  currency: USD
+  period: per-use
+  unit: million characters
+  included_quota: No Free Tier for this service
+- name: Active Custom Translation
+  price_text: $60.00 per million characters
+  price: 60
+  currency: USD
+  period: per-use
+  unit: million characters
+  included_quota: 500,000 characters per month for 2 months
+- name: Parallel data storage
+  price_text: $0.023 per GB per month
+  price: 0.023
+  currency: USD
+  period: month
+  unit: GB
+  included_quota: 200 GB free parallel data storage for every account
+  overage: Customers pay $0.023 per GB per month for excess data stored
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - subscription
+  units:
+  - data
+  plans:
+  - name: Standard Text Translation
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Batch Document Translation
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Real-Time Document Translation (Text & HTML)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Real-Time Document Translation (Docx)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Active Custom Translation
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Parallel data storage
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - month
