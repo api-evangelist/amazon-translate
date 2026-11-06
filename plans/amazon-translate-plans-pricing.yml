@@ -65,7 +65,7 @@ plans:
   included_quota: 200 GB free parallel data storage for every account
   overage: Customers pay $0.023 per GB per month for excess data stored
 x-canonical:
-  generated: '2026-11-02'
+  generated: '2026-11-06'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
